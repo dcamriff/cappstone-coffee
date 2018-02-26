@@ -11,15 +11,15 @@ class App extends Component {
   render() {
 
     const HomeComponent = () => (<Home />)
-    const ProductList = () => (<ProductList />)
-
+    const ProductListComponent = () => (<ProductList />)
+    
     return (
       <Router>
         <div className="App">
           <div></div>
           <Switch>
           <Route exact path="/" component={HomeComponent} />
-          <Route exact path="/products" component={ProductList} />
+          <Route exact path="/products" component={ProductListComponent} />
           </Switch>
         </div>
       </Router>

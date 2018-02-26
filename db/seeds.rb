@@ -72,7 +72,7 @@ iced_coffee = Product.create!(
 )
 
 chia_pudding = Product.create!(
-    item: "chai pudding",
+    item: "chia pudding",
     description: "chia seed pudding, fresh seasonal berries, honey",
     image: "https://i.imgur.com/cSbUhfm.png",
     price: 3.00,
@@ -133,6 +133,13 @@ order1 = Order.create(
 lineitem1 = OrderItem.create!(
     order: order1,
     product: almond_croissant,
+    quantity: 1,
+    unit_price: 4.00,
+    total_price: 4.00
+)
+lineitem2 = OrderItem.create!(
+    order: order1,
+    product: chia_pudding,
     quantity: 1,
     unit_price: 4.00,
     total_price: 4.00
