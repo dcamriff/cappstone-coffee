@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  namespace :api do
+      resources :order_status do
+        resources :orders
+      end
+      resources :orders do
+        resources :order_items
+      end
+      resources :products do
+        resources :order_items
+      end
+    end
 end
