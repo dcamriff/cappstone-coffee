@@ -7,12 +7,15 @@ export const Container = styled.div`
 width: 100vw;
 min-height: 100vh;
 display: flex;
-justify-content: space-around;
+justify-content: center;
 align-items: center;
 flex: 1 0 auto;
 `
 
 export const SplashContainer = Container.extend`
+min-height: 80vh;
+flex-direction: column;
+justify-content: center;
 background: url(${SplashImg}) center no-repeat;
 background-size: cover;
 
@@ -22,13 +25,13 @@ background-size: cover;
 `
 
 export const HomePageText = styled.div`
-position: relative;
-top: 20px;
+margin-top: 10px;
+color: whitesmoke;
 `
 
 export const LoginContainer = styled.div`
-position: relative;
-top: 200px;
+/* position: absolute; */
+margin-top: 350px;
 `
 
 // Credit: SplashImg Photo by Nathan Dumlao on Unsplash
