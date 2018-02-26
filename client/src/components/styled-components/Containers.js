@@ -10,6 +10,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex: 1 0 auto;
+text-align: center;
 `
 
 export const SplashContainer = Container.extend`

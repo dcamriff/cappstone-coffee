@@ -1,6 +1,7 @@
 User.destroy_all
 Product.destroy_all
-OrderStatus.delete_all
+Order.destroy_all
+OrderItem.destroy_all
 
 ActiveRecord::Base.connection.tables.each do |t|
     ActiveRecord::Base.connection.reset_pk_sequence!(t)
@@ -120,7 +121,20 @@ ninti = User.create!(
     name: "Ninti"
 )
 
-OrderStatus.create! name: "In Progress"
-OrderStatus.create! name: "Placed"
-OrderStatus.create! name: "Cancelled"
+order1 = Order.create(
+    subtotal: 4.00,
+    tax: 0.25,
+    tip: 1.00,
+    total: 5.25,
+    status: "new",
+    user: diane
+)
+
+lineitem1 = OrderItem.create!(
+    order: order1,
+    product: almond_croissant,
+    quantity: 1,
+    unit_price: 4.00,
+    total_price: 4.00
+)
 
