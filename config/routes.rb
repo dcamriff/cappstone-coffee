@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
+    get 'users/retrieve/:email', :to => 'users#retrieve'
+    resources :users do
+      resources :orders
+    end
       resources :order_status do
         resources :orders
       end
