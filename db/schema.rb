@@ -39,9 +39,11 @@ ActiveRecord::Schema.define(version: 20180226002839) do
     t.decimal "tip", precision: 12, scale: 3
     t.decimal "total", precision: 12, scale: 3
     t.bigint "order_status_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_status_id"], name: "index_orders_on_order_status_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -67,4 +69,5 @@ ActiveRecord::Schema.define(version: 20180226002839) do
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "orders", "order_statuses"
+  add_foreign_key "orders", "users"
 end
