@@ -13,7 +13,9 @@ class Home extends Component {
                         <form action="">
                             <input name="email" type="text"/>
                             <input name="password" type="text"/>
-                            
+                            <br/>
+                            <button>Sign Up</button>
+                            <input type="submit" value="Log In"/>
                         </form>
                     </LoginContainer>
                 </SplashContainer>

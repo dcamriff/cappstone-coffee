@@ -21,6 +21,11 @@ background-size: cover;
 }
 `
 
+export const HomePageText = styled.div`
+position: relative;
+top: 20px;
+`
+
 export const LoginContainer = styled.div`
 position: relative;
 top: 200px;
