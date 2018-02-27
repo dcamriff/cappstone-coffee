@@ -34,5 +34,24 @@ export const LoginContainer = styled.div`
 /* position: absolute; */
 margin-top: 350px;
 `
-
 // Credit: SplashImg Photo by Nathan Dumlao on Unsplash
+
+// PRODUCTS
+
+export const ProductsContainer = styled.div`
+width: 80vw;
+justify-content: center;
+align-items: center;
+`
+
+export const SingleProductContainer = styled.div`
+display: flex;
+
+justify-content: space-between;
+
+img {
+    width: 60px;
+    height: 60px;
+
+}
+`

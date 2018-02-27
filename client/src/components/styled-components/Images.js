@@ -7,7 +7,8 @@ width: 100vw;
     width: 75vw;
 }
 `
- 
+
+
 export default {
 
 }
