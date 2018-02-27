@@ -19,3 +19,7 @@ width: 40px;
 export const PersonIconStyle = styled.img`
 width: 30px;
 `
+
+export const MenuItem = styled.img`
+
+`

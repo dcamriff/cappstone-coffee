@@ -1,4 +1,13 @@
 class Api::OrdersController < ApplicationController
+
+# Sorced def order from blog post
+    def order
+        @order = Order.find(session[:order_id])
+        rescue ActiveRecord::RecordNotFound
+            @order = Order.create
+            session[:order_ird] = @order.id
+    end
+
     def index
         @orders = Order.all
         render json: @orders

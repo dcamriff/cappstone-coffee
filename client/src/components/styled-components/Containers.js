@@ -53,6 +53,9 @@ justify-content: space-between;
 img {
     width: 60px;
     height: 60px;
+    border-radius: 50%;
+    border: solid #774222 1px;
+    margin: 5px;
 
 }
 `
