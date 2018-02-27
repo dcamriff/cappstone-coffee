@@ -40,6 +40,7 @@ margin-top: 350px;
 
 export const ProductsContainer = styled.div`
 width: 80vw;
+margin-top: 75px;
 justify-content: center;
 align-items: center;
 `

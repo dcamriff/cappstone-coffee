@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Product from './Product'
+import Navbar from './Navbar'
 import { ProductsContainer } from './styled-components/Containers'
 
 class ProductList extends Component {
@@ -44,10 +45,14 @@ class ProductList extends Component {
                 )
         })
             return (
+                <div>
+                <Navbar />
                 <ProductsContainer>
                     Menu
                     {productList}
                 </ProductsContainer>
+                </div>
+                
             )
     }
 }

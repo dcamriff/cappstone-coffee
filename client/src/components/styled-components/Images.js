@@ -7,8 +7,15 @@ width: 100vw;
     width: 75vw;
 }
 `
+export const LogoImage = styled.img`
+    margin: 15px 0 5px 15px;
+    width: 50px;
+`
 
+export const CartIconStyle = styled.img`
+width: 40px;
+`
 
-export default {
-
-}
+export const PersonIconStyle = styled.img`
+width: 30px;
+`
