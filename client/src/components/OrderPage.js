@@ -1,13 +1,42 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import OrderItem from './OrderItem'
+import OrderLineItem from './OrderLineItem'
 import Navbar from './Navbar'
 import { OrderItemsContainer } from './styled-components/Containers'
 
 class OrderPage extends Component {
 
     state = {
-        order_items: {products: []}
+        order: {},
+        order_items: [],
+        products: []
+    }
+
+    getOrder = async () => {
+        const res = await axios.get(`/api/orders/${this.props.match.params.orderId}`)
+        this.setState({order: res.data})
+    }
+
+    getOrderItems = async () => {
+        const res = await axios.get(`/api/orders/${this.props.match.params.orderId}/order_items`)
+        this.setState({order_items: res.data})
+    }
+
+    getProducts = async (event) => {
+        event.preventDefault()
+        const res = await axios.get(`/api/products`)
+        console.log(res)
+        this.setState({products: res.data})
+    }
+
+    handleChange = event => {
+        this.setState({[event.target.name]: event.target.value })
+        event.preventDefault()
+    }
+
+    componentWillMount () {
+        this.getOrder()
+        this.getOrderItems()
     }
 
     
@@ -15,7 +44,7 @@ class OrderPage extends Component {
         
         const orderItems = this.state.order_items.map((order_item, index) => {
             return (
-                <OrderItem
+                <OrderLineItem
                 image={order_item.image}
                 item={order_item.item}
                 description={order_item.description}
@@ -28,7 +57,6 @@ class OrderPage extends Component {
                 <div>
                 <Navbar />
                 <OrderItemsContainer>
-                    Menu
                     {orderItems}
                 </OrderItemsContainer>
                 </div>
