@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { SingleProductContainer } from './styled-components/Containers'
 
-class OrderItem extends Component {
-    render() {
+const OrderItem = (props) => {
+    
         return (
             <div>
                 <SingleProductContainer>
@@ -17,8 +18,9 @@ class OrderItem extends Component {
                     </div>
                     
                 </SingleProductContainer>
+            </div>
         )
-    }
+    
 }
 
 export default OrderItem

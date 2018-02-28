@@ -59,3 +59,19 @@ img {
 
 }
 `
+export const ItemName = styled.p`
+font-weight: bold;
+`
+export const Description = styled.p`
+font-style: italic;
+`
+export const Price = styled.p`
+font-weight: bold;
+`
+
+export const OrderItemsContainer = styled.div`
+width: 80vw;
+margin-top: 75px;
+justify-content: center;
+align-items: center;
+`

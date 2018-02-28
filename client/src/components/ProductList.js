@@ -5,35 +5,35 @@ import Navbar from './Navbar'
 import { ProductsContainer } from './styled-components/Containers'
 
 class ProductList extends Component {
-    constructor(){
-        super()
-        this.state = {
-            error: '',
-            products: []
-        }
-    }
+    // constructor(){
+    //     super()
+    //     this.state = {
+    //         error: '',
+    //         products: []
+    //     }
+    // }
 
-    componentWillMount(){
-        this.fetchProducts()
-    }
+    // componentWillMount(){
+    //     this.fetchProducts()
+    // }
 
-    fetchProducts = async () => {
-        try {
-            const res = await axios.get('/api/products')
-            await this.setState({products: res.data})
-            return res.data
-        }
-        catch (err) {
-            console.log(err)
-            await this.setState({error: err.message})
-            return err.message
-        }
-    }
+    // fetchProducts = async () => {
+    //     try {
+    //         const res = await axios.get('/api/products')
+    //         await this.setState({products: res.data})
+    //         return res.data
+    //     }
+    //     catch (err) {
+    //         console.log(err)
+    //         await this.setState({error: err.message})
+    //         return err.message
+    //     }
+    // }
     render () {
-        if (this.state.error){
-            return <div>{this.state.error}</div>
-        }
-        const productList = this.state.products.map((product, index) => {
+        // if (this.state.error){
+        //     return <div>{this.state.error}</div>
+        // }
+        const productList = this.props.products.map((product, index) => {
             return (
                 <Product
                 image={product.image}

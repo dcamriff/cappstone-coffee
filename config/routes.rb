@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
   namespace :api do
-    get 'users/retrieve/:email', :to => 'users#retrieve'
-    resources :users do
-      resources :orders
-    end
-      resources :order_status do
-        resources :orders
-      end
-      resources :orders do
-        resources :order_items
-      end
-      resources :products do
-        resources :order_items
-      end
+    get 'users/retrieve/:email', to: 'users#retrieve'
+    resources :users
+    resources :orders
+    resources :products
     end
 end
+
+# /users/2
+# /orders/1
+# /products/2
+# 
+# user#show
+# render json: {user: @user, orders: @orders}

@@ -1,6 +1,6 @@
 class Api::OrdersController < ApplicationController
 
-# Sorced def order from blog post
+# Sourced def order from blog post
     def order
         @order = Order.find(session[:order_id])
         rescue ActiveRecord::RecordNotFound

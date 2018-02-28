@@ -9,7 +9,7 @@ class Navbar extends Component {
     render() {
         return (
             <Nav>
-                <Link to="/"><LogoImage src="https://i.imgur.com/Iv70Ed1.png"/></Link>
+                <Link to="/"><LogoImage src="https://i.imgur.com/zIMBOmk.jpg"/></Link>
             
                 <div>
                     <Link to="/login">
